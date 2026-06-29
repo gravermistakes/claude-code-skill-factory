@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat \"$HOME/.claude/stay-in-the-room.md\" 2>/dev/null || true",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+  "_metadata": {
+    "generated_by": "build-hook",
+    "event_type": "SessionStart",
+    "hook_name": "stay-in-the-room",
+    "purpose": "On every session start, inject an honest note from a prior session into context so the next instance carries forward a truthful register instead of starting clean and performing."
+  }
+}
